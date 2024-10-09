@@ -23,7 +23,7 @@ Please see ```gene_library_construction/main.py```. The output results will be p
 
 ### 2.1 Environment setup
 
-Please see ```DNABERT-2/requirements.txt```.
+Please see ```DNABERT_2/requirements.txt```.
 
 ### 2.2 Modify configuration files and hyperparameters
 The configuration file is ```DNABERT_2/config.json```, which can be used to modify the hidden layer dimensions, number of layers, and other configurations of the DNABERT-2 model. Hyperparameters during training are set in ```DNABERT_2/parse.py```.
