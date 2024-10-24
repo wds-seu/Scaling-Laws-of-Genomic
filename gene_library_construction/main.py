@@ -97,7 +97,7 @@ def reference_sampling():
     print(time.time() - cur_time)
 
 
-def process_random_sampling(_):
+def process_pangenome_sampling(_):
     sequence, is_ref = None, None
     while sequence is None:
         chrom_id = random.randint(0, 22)
@@ -112,18 +112,18 @@ def process_random_sampling(_):
 
     file_index = random.randint(0, NUMBER_OF_FILE - 1)
     with locks_of_write[file_index]:
-        with open(f'./random_sampling/{file_index}.txt', 'a') as file:
+        with open(f'./pan-genome_sampling/{file_index}.txt', 'a') as file:
             file.write(sequence + '\n')
 
 
-def random_sampling():
+def pangenome_sampling():
     cur_time = time.time()
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-        pool.map(process_random_sampling, range(NUMBER_OF_SEQ))
+        pool.map(process_pangenome_sampling, range(NUMBER_OF_SEQ))
     print(time.time() - cur_time)
 
 
-def process_variant_sampling(_):
+def process_variation_sampling(_):
     sequence, is_ref = None, True
     while is_ref:
         chrom_id = random.randint(0, 22)
@@ -137,21 +137,19 @@ def process_variant_sampling(_):
         sequence, is_ref = query_haplotype(sample, haplotype, chrom_id, start, end)
     file_index = random.randint(0, NUMBER_OF_FILE - 1)
     with locks_of_write[file_index]:
-        with open(f'./variant_sampling/{file_index}.txt', 'a') as file:
+        with open(f'./variation_sampling/{file_index}.txt', 'a') as file:
             file.write(sequence + '\n')
 
 
-def variant_sampling():
+def variation_sampling():
     cur_time = time.time()
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
-        pool.map(process_variant_sampling, range(NUMBER_OF_SEQ))
+        pool.map(process_variation_sampling, range(NUMBER_OF_SEQ))
     print(time.time() - cur_time)
 
 
 if __name__ == '__main__':
     test()
     reference_sampling()
-    random_sampling()
-    variant_sampling()
-
-
+    pangenome_sampling()
+    variation_sampling()

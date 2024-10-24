@@ -98,7 +98,7 @@ for part_id in range(last_part + 1, 100):
         'optimizer_state_dict': optimizer.state_dict(),
         'warmup_scheduler_state_dict': warmup_scheduler.state_dict(),
     }
-    torch.save(checkpoint, '../model/variant_sampling/230M_' + str(part_id) + '.pth')
-    last_file = '../model/variant_sampling/230M_' + str(part_id - 1) + '.pth'
+    torch.save(checkpoint, '../model/reference_sampling/230M_' + str(part_id) + '.pth')
+    last_file = '../model/reference_sampling/230M_' + str(part_id - 1) + '.pth'
     if os.path.exists(last_file):
         os.remove(last_file)

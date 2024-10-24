@@ -9,15 +9,15 @@ The human reference genome dataset we use is based on the genome assembly GRCh38
 Download [the human reference genome dataset](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.26/) and place it in the ```data``` folder.
 
 ### 1.2 The human pan-genome dataset
-The human pan-genome dataset we used is based on the 1000 Genomes Project, an international research initiative aimed at creating the most detailed catalog of human genetic variation. The data from the 1000 Genomes Project are widely utilized in research and are freely accessible to the public. We downloaded the variant calling format (VCF) files from the project, which document genetic variants with a frequency of 1% or greater in the population. These variant data statistics are derived from 3,202 high-coverage human genomes, encompassing a total of 20.5 trillion nucleotides. This dataset contains rich information on genetic variants, and we believe that such diverse data can more comprehensively represent human genetic variation.
+The human pan-genome dataset used in this study is derived from the 1000 Genomes Project, an initiative aimed at cataloging human genetic variation. The publicly accessible data from this project are widely used in research. We downloaded the variant calling format (VCF) files documenting genetic variants across 3,202 high-coverage human genomes. This dataset provides rich information on genetic variants, enabling a more comprehensive representation of human genetic variation.
 
 Download  [the human pan-genome dataset](http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_phased/) and place it in the ```data``` folder.
 
 ### 1.3 Data preparation
 
-We employed three different sampling strategies on the downloaded corpus, resulting in three corresponding pre-training datasets. The three sampling strategies include random sampling from the human reference genome, random sampling from the human pan-genome, and random sampling from variant sequences of the human pan-genome.
+We constructed pre-training datasets using the human reference genome and human pan-genome datasets to investigate the scaling laws of human genomic language models. Three sampling strategies were applied to the downloaded corpus. Each sampling strategy ultimately results in one billion sampled DNA sequences.
 
-Please see ```gene_library_construction/main.py```. The output results will be placed in the following three folders:```gene_library_construction/random_sampling/```,```gene_library_construction/reference_sampling/```,```gene_library_construction/variant_sampling/```.
+Please see ```gene_library_construction/main.py```. The output results will be placed in the following three folders:```gene_library_construction/pan-genome_sampling/```,```gene_library_construction/reference_sampling/```,```gene_library_construction/variation_sampling/```.
 
 ## 2. Model Pre-training
 

@@ -18,8 +18,8 @@ Tokens_scaling_law = []
 
 # draw = 'loss'
 # draw = 'scaling law'
-# draw = 'params'
-draw = 'tokens'
+draw = 'params'
+# draw = 'tokens'
 
 
 def loss_plot(loss_file, color, label, param):
@@ -76,25 +76,25 @@ def loss_plot(loss_file, color, label, param):
 # loss_plot('./result_reference_sampling_230M.txt', colors[4], 'reference 230M', 230403328)
 # 0.8314
 
-# loss_plot('./result_random_sampling_15M.txt', colors[5], 'random 15M', 14963712)
-# loss_plot('./result_random_sampling_28M.txt', colors[6], 'random 28M', 27565578)
-# loss_plot('./result_random_sampling_60M.txt', colors[7], 'random 60M', 60417290)
-# loss_plot('./result_random_sampling_117M.txt', colors[8], 'random 117M', 117074176)
-# loss_plot('./result_random_sampling_230M.txt', colors[9], 'random 230M', 230403328)
+# loss_plot('./result_pan-genome_sampling_15M.txt', colors[5], 'pan-genome 15M', 14963712)
+# loss_plot('./result_pan-genome_sampling_28M.txt', colors[6], 'pan-genome 28M', 27565578)
+# loss_plot('./result_pan-genome_sampling_60M.txt', colors[7], 'pan-genome 60M', 60417290)
+# loss_plot('./result_pan-genome_sampling_117M.txt', colors[8], 'pan-genome 117M', 117074176)
+# loss_plot('./result_pan-genome_sampling_230M.txt', colors[9], 'pan-genome 230M', 230403328)
 # 0.8387
 
-# loss_plot('./result_variant_sampling_15M.txt', colors[10], 'variant 15M', 14963712)
-# loss_plot('./result_variant_sampling_28M.txt', colors[11], 'variant 28M', 27565578)
-# loss_plot('./result_variant_sampling_60M.txt', colors[12], 'variant 60M', 60417290)
-# loss_plot('./result_variant_sampling_117M.txt', colors[13], 'variant 117M', 117074176)
-# loss_plot('./result_variant_sampling_230M.txt', colors[14], 'variant 230M', 230403328)
+loss_plot('./result_variation_sampling_15M.txt', colors[10], 'variation 15M', 14963712)
+loss_plot('./result_variation_sampling_28M.txt', colors[11], 'variation 28M', 27565578)
+loss_plot('./result_variation_sampling_60M.txt', colors[12], 'variation 60M', 60417290)
+loss_plot('./result_variation_sampling_117M.txt', colors[13], 'variation 117M', 117074176)
+loss_plot('./result_variation_sampling_230M.txt', colors[14], 'variation 230M', 230403328)
 # 0.8297
 
-loss_plot('./result_reference_sampling_15M_kmer.txt', colors[15], 'reference kmer 15M', 14963712)
-loss_plot('./result_reference_sampling_28M_kmer.txt', colors[16], 'reference kmer 28M', 27565578)
-loss_plot('./result_reference_sampling_60M_kmer.txt', colors[17], 'reference kmer 60M', 60417290)
-loss_plot('./result_reference_sampling_117M_kmer.txt', colors[18], 'reference kmer 117M', 117074176)
-loss_plot('./result_reference_sampling_230M_kmer.txt', colors[19], 'reference kmer 230M', 230403328)
+# loss_plot('./result_reference_sampling_15M_kmer.txt', colors[15], 'reference kmer 15M', 14963712)
+# loss_plot('./result_reference_sampling_28M_kmer.txt', colors[16], 'reference kmer 28M', 27565578)
+# loss_plot('./result_reference_sampling_60M_kmer.txt', colors[17], 'reference kmer 60M', 60417290)
+# loss_plot('./result_reference_sampling_117M_kmer.txt', colors[18], 'reference kmer 117M', 117074176)
+# loss_plot('./result_reference_sampling_230M_kmer.txt', colors[19], 'reference kmer 230M', 230403328)
 # 0.8074
 
 if draw == 'loss':
